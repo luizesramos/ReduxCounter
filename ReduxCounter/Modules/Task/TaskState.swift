@@ -7,10 +7,12 @@
 
 import Foundation
 
-struct Task  {
+struct TodoTask: Identifiable {
+    let id: UUID = .init()
     let title: String
 }
 
 struct TaskState: ReduxState {
-    let tasks: [Task]
+    // "var" to allow reducer to change the state more easily
+    var tasks: [TodoTask] = .init()
 }

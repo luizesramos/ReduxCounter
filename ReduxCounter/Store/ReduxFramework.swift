@@ -13,17 +13,5 @@ protocol Action {}
 
 typealias Reducer<State: ReduxState> = (State, Action) -> State
 
-final class Store<StoreState: ReduxState>: ObservableObject {
-    @Published var state: StoreState
-    
-    private let reducer: Reducer<StoreState>
-    
-    init(reducer: @escaping Reducer<StoreState>, state: StoreState) {
-        self.reducer = reducer
-        self.state = state
-    }
-    
-    func dispatch(action: Action) {
-        state = reducer(state, action)
-    }
-}
+typealias Dispatcher = (Action) -> Void
+typealias Middleware<State: ReduxState> = (State, Action, @escaping Dispatcher) -> Void

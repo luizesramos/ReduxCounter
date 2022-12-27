@@ -10,14 +10,15 @@ import Foundation
 func counterReducer(state: CounterState, action: Action) -> CounterState {
     var state = state
     
-    if action is IncrementAction {
+    switch action {
+    case is IncrementAction:
         state.counter += 1
-    } else if action is DecrementAction {
+    case is DecrementAction:
         state.counter -= 1
-    } else if let a = action as? AddAction {
+    case let a as AddAction:
         state.counter += a.amount
-    } else {
-        debugPrint("Action not implemented \(action)")
+    default:
+        break // this domain does not handle the requested action
     }
     
     return state

@@ -9,4 +9,5 @@ import Foundation
 
 struct AppState: ReduxState {
     var counterState: CounterState = .init()
+    var taskState: TaskState = .init()
 }

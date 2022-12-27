@@ -18,6 +18,11 @@
 		EB0CF23F295B6230000E96B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF23E295B6230000E96B7 /* AppState.swift */; };
 		EB0CF241295B6243000E96B7 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF240295B6243000E96B7 /* CounterState.swift */; };
 		EB0CF244295B626E000E96B7 /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF243295B626E000E96B7 /* TaskState.swift */; };
+		EB0CF246295B6373000E96B7 /* TaskReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF245295B6373000E96B7 /* TaskReducer.swift */; };
+		EB0CF248295B63C7000E96B7 /* TaskActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF247295B63C7000E96B7 /* TaskActions.swift */; };
+		EB0CF24A295B8F55000E96B7 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF249295B8F55000E96B7 /* AddTaskView.swift */; };
+		EB0CF24C295BA99D000E96B7 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF24B295BA99D000E96B7 /* LogMiddleware.swift */; };
+		EB0CF24E295BAB74000E96B7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0CF24D295BAB74000E96B7 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		EB0CF23E295B6230000E96B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		EB0CF240295B6243000E96B7 /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		EB0CF243295B626E000E96B7 /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
+		EB0CF245295B6373000E96B7 /* TaskReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReducer.swift; sourceTree = "<group>"; };
+		EB0CF247295B63C7000E96B7 /* TaskActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActions.swift; sourceTree = "<group>"; };
+		EB0CF249295B8F55000E96B7 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		EB0CF24B295BA99D000E96B7 /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
+		EB0CF24D295BAB74000E96B7 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				EB0CF236295B5E00000E96B7 /* ReduxFramework.swift */,
+				EB0CF249295B8F55000E96B7 /* AddTaskView.swift */,
+				EB0CF24B295BA99D000E96B7 /* LogMiddleware.swift */,
+				EB0CF24D295BAB74000E96B7 /* Store.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -124,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				EB0CF243295B626E000E96B7 /* TaskState.swift */,
+				EB0CF245295B6373000E96B7 /* TaskReducer.swift */,
+				EB0CF247295B63C7000E96B7 /* TaskActions.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -199,11 +214,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB0CF21F295B3BF1000E96B7 /* ContentView.swift in Sources */,
+				EB0CF248295B63C7000E96B7 /* TaskActions.swift in Sources */,
 				EB0CF233295B4014000E96B7 /* CounterReducer.swift in Sources */,
+				EB0CF24A295B8F55000E96B7 /* AddTaskView.swift in Sources */,
 				EB0CF23F295B6230000E96B7 /* AppState.swift in Sources */,
+				EB0CF246295B6373000E96B7 /* TaskReducer.swift in Sources */,
 				EB0CF244295B626E000E96B7 /* TaskState.swift in Sources */,
+				EB0CF24E295BAB74000E96B7 /* Store.swift in Sources */,
 				EB0CF21D295B3BF1000E96B7 /* ReduxCounterApp.swift in Sources */,
 				EB0CF237295B5E00000E96B7 /* ReduxFramework.swift in Sources */,
+				EB0CF24C295BA99D000E96B7 /* LogMiddleware.swift in Sources */,
 				EB0CF241295B6243000E96B7 /* CounterState.swift in Sources */,
 				EB0CF239295B5E97000E96B7 /* AppReducer.swift in Sources */,
 				EB0CF231295B4003000E96B7 /* CounterActions.swift in Sources */,

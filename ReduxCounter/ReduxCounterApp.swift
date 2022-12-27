@@ -9,7 +9,11 @@ import SwiftUI
 
 @main
 struct ReduxCounterApp: App {
-    let store: Store = .init(reducer: appReducer, state: AppState())
+    let store: Store = .init(reducer: appReducer,
+                             state: AppState(),
+                             middlewares: [
+                                logMiddleware
+                             ])
     
     var body: some Scene {
         WindowGroup {

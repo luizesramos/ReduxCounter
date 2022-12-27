@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var store: Store<AppState>
+    @State var addTaskPresented: Bool = false
     
     struct Props {
         let counter: Int
         let increment: () -> Void
         let decrement: () -> Void
-        let add100: () -> Void
+        let addAmount: (Int) -> Void
+        let addTask: (TodoTask) -> Void
+        
     }
     
     var props: Props {
@@ -25,11 +28,15 @@ struct ContentView: View {
         Props(counter: state.counter,
               increment: { store.dispatch(action: IncrementAction()) },
               decrement: { store.dispatch(action: DecrementAction()) },
-              add100: { store.dispatch(action: AddAction(amount: 100))} )
+              addAmount: { store.dispatch(action: AddAction(amount: $0))},
+              addTask: { store.dispatch(action: AddTaskAction(task: $0)) }
+        )
     }
     
     var body: some View {
         VStack {
+            Spacer()
+            
             Text("\(props.counter)")
                 .padding()
             Button("Increment") {
@@ -39,9 +46,17 @@ struct ContentView: View {
                 props.decrement()
             }
             Button("Add 100") {
-                props.add100()
+                props.addAmount(100)
             }
+            
+            Spacer()
+            
+            Button("Add Task") {
+                addTaskPresented = true
+            }
+            Spacer()
         }
+        .sheet(isPresented: $addTaskPresented) { AddTaskView() }
     }
 }
 
